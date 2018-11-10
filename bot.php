@@ -290,7 +290,7 @@ if ($command == '/menu') {
     $text .= "/shalat [lokasi] \n";
     $text .= "/qiblat [lokasi] \n";
     $text .= "/film [teks] \n";
-    $text .= "/qr [teks] \n";s] \n";
+    $text .= "/qr [teks] \n";
     $text .= "/ahli [nama] \n";
     $text .= "/arti-nama [nama] \n";
     $text .= "/light [teks] \n";
@@ -299,7 +299,7 @@ if ($command == '/menu') {
         $text .= "/instagram [unsername] \n";
         $text .= "/jadwaltv [stasiun] \n";
     $text .= "/creator \n";
-    $text .= "\n「C: RPD&VSB」";
+    $text .= "\n「C: RPD & VSB」";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
