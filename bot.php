@@ -1,8 +1,8 @@
 <?php
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
-$channelAccessToken = 'jlVCtWI9kvIqq97u/o3/8GfUkB5w+Doyabt9FHFxr+6HwTBBBkU6blP5f6fixds0iTdNCxX75qpsJhR2rYoPmPuj+v029pZRwQ/6m2Me7UewRs03IBtdaKvUX9pfgDkz4v5MznGPARYAGFLcSec4WAdB04t89/1O/w1cDnyilFU='; //sesuaikan 
-$channelSecret = '0dd9cae614eda4db5f308b723f8c9677';//sesuaikan
+$channelAccessToken = '7y341zDol9PRxZTBQbUBH+G/hMz2HU/ddJY6TP1ym61Onnws3oOoHTUYn7tFz8BvWYbuYRS0GLb9cuv+IXgqrX2Si9N00U4G3k1XaocU324vr8jlzOJdpDBxzIidKLZUTPnLjqix60PALljIQhqKggdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '773ac39b8de82b0cdc49237ddcc42dda';//sesuaikan
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $userId     = $client->parseEvents()[0]['source']['userId'];
 $groupId    = $client->parseEvents()[0]['source']['groupId'];
@@ -28,37 +28,11 @@ function tv($keyword) {
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
     $result = "「Jadwal AcaraTV」";
-    $result .= "\nStatus : ";
-    $result .= $json['status'];
+    $result .= "\nStatus : Success!!!";
     $result .= "\nStasiun : " . $keyword . "-";
     $result .= "\nJadwal : ";
     $result .= $json['result'];
     $result .= "\n「Done~」";
-    return $result;
-}
-function lirik($keyword) {
-    $uri = "https://rest.farzain.com/api/joox.php?id=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
-    $response = Unirest\Request::get("$uri");
-    $json = json_decode($response->raw_body, true);
-    $result = "「Lirik Lagu」";
-    $result .= "\nStatus : ";
-    $result .= $json['status'];
-    $result .= "\nPenyanyi : ";
-    $result .= $json['info']['penyanyi'];
-    $result .= "\nJudul : ";
-    $result .= $json['info']['judul'];
-    $result .= "\nAlbum : ";
-    $result .= $json['info']['album'];
-    $result .= "\n\nLirik : ";
-    $result .= $json['lirik'];
-    $result .= "\n「Done~」";
-    return $result;
-}
-function imgj($keyword) {
-    $uri = "https://rest.farzain.com/api/joox.php?id=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
-    $response = Unirest\Request::get("$uri");
-    $json = json_decode($response->raw_body, true);
-    $result = $json['gambar'];
     return $result;
 }
 #-------------------------[Open]-------------------------#
@@ -89,13 +63,10 @@ function ahli($keyword) {
     $response = Unirest\Request::get("$uri");
   
     $json = json_decode($response->raw_body, true);
-    $result = "「Ahli」";
-    $result .= "\nStatus : ";
-    $result .= $json['status'];
-    $result .= "\nNama : " . $keyword;
-    $result .= "\nResult : ";
-    $result .= $json['result']['result'];
-    $result .= "\n「Done~」";
+    $parsed = array();
+    $parsed['a1'] = $json['result']['result'];
+    $parsed['a2'] = $json['result']['image'];
+    $parsed['a3'] = "Nama :" . $keyword . "-";
     return $parsed;
 }
 #-------------------------[Open]-------------------------#
@@ -125,8 +96,7 @@ function quotes($keyword) {
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
     $result = "「Quotes」";
-    $result .= "\nStatus : ";
-    $result .= $json['status'];
+    $result .= "Status : Success!!!";
     $result .= "\nQuotes : ";
     $result .= $json['result']['quotes'];
     $result .= "\nBy : ";
@@ -140,25 +110,10 @@ function arti($keyword) {
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
     $result = "「Arti Nama」";
-    $result .= "\nStatus : ";
-    $result .= $json['status'];
+    $result .= "\nStatus : Success!!!";
     $result .= "\nNama : " . $keyword . "-";
     $result .= "\nArti Nama : ";
     $result .= $json['result'];
-    $result .= "\n「Done~」";
-    return $result;
-}
-function wiki($keyword) {
-    $uri = "https://rest.farzain.com/api/wikipedia.php?id=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
-    $response = Unirest\Request::get("$uri");
-    $json = json_decode($response->raw_body, true);
-    $result = "「Wikipedia」";
-    $result .= "\nStatus : ";
-    $result .= $json['status'];
-    $result .= "\nTitle : ";
-    $result .= $json['title'];
-    $result .= "\n\nDescription : ";
-    $result .= $json['description'];
     $result .= "\n「Done~」";
     return $result;
 }
@@ -326,29 +281,29 @@ function qibla($keyword) {
 }
 //show menu, saat join dan command,menu
 if ($command == '/menu') {
-    $text .= "「 Virtual Bots 」\n\n";
-    $text .= "Menu Help\n\n";
-    $text .= "/jam \n";
-    $text .= "/quotes \n";
-    $text .= "/say [teks] \n";
-    $text .= "/definition [teks] \n";
-    $text .= "/cooltext [teks] \n";
-    $text .= "/shalat [lokasi] \n";
-    $text .= "/qiblat [lokasi] \n";
-    $text .= "/film [teks] \n";
-    $text .= "/qr [teks] \n";
-    $text .= "/neon [teks] \n";
-    $text .= "/ahli [nama] \n";
-    $text .= "/arti-nama [nama] \n";
-    $text .= "/light [teks] \n";
-    $text .= "/film-syn [Judul] \n";
-    $text .= "/lirik [Judul] \n";
-    $text .= "/wikipedia [Judul] \n";
-    $text .= "/zodiak [tanggal lahir] \n";
-        $text .= "/instagram [unsername] \n";
-        $text .= "/jadwaltv [stasiun] \n";
-    $text .= "/creator \n";
-    $text .= "\n「C: RPD & VSB」
+    $text .= "「Keyword RpdBot~」\n\n";
+    $text .= "- Help\n";
+    $text .= "- /jam \n";
+    $text .= "- /quotes \n";
+    $text .= "- /say [teks] \n";
+    $text .= "- /definition [teks] \n";
+    $text .= "- /cooltext [teks] \n";
+    $text .= "- /shalat [lokasi] \n";
+    $text .= "- /qiblat [lokasi] \n";
+    $text .= "- /film [teks] \n";
+    $text .= "- /qr [teks] \n";
+    $text .= "- /neon [teks] \n";
+    $text .= "- /ahli [nama] \n";
+    $text .= "- /arti-nama [nama] \n";
+    $text .= "- /light [teks] \n";
+    $text .= "- /film-syn [Judul] \n";
+    $text .= "- /lirik [Judul] \n";
+    $text .= "- /wikipedia [Judul] \n";
+    $text .= "- /zodiak [tanggal lahir] \n";
+        $text .= "- /instagram [unsername] \n";
+        $text .= "- /jadwaltv [stasiun] \n";
+    $text .= "- /creator \n";
+    $text .= "\n「Done~」";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -382,28 +337,10 @@ if ($type == 'join') {
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
-            array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $text,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
+            array(
+                'type' => 'text',
+                'text' => $text
+            )
         )
     );
 }
@@ -414,28 +351,10 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
+                array(
+                    'type' => 'text',
+                    'text'  => $result
+                )
             )
         );
     }
@@ -538,34 +457,90 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
+                array( 
+                    'type' => 'text',
+                    'text' => $result
+                )
             )
         );
     }
 }
 #-------------------------[Open]-------------------------#
-#-------------------------[Open]-------------------------#  
+#-------------------------[Open]-------------------------#
+if($message['type']=='text') {
+        if ($command == '/test123') {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+                  'type' => 'bubble',
+                  'styles' => 
+                  array (
+                    'footer' => 
+                    array (
+                      'separator' => true,
+                    ),
+                  ),
+                  'body' => 
+                  array (
+                    'type' => 'box',
+                    'layout' => 'vertical',
+                    'contents' => 
+                    array (
+                      0 => 
+                      array (
+                        'type' => 'text',
+                        'text' => 'Arti Nama',
+                        'weight' => 'bold',
+                        'size' => 'xxl',
+                        'margin' => 'md',
+                      ),
+                      1 => 
+                      array (
+                        'type' => 'text',
+                        'text' => 'Test',
+                        'size' => 'xs',
+                        'color' => '#aaaaaa',
+                        'wrap' => true,
+                      ),
+                      2 => 
+                      array (
+                        'type' => 'separator',
+                        'margin' => 'xxl',
+                      ),
+                      3 => 
+                      array (
+                        'type' => 'box',
+                        'layout' => 'horizontal',
+                        'margin' => 'md',
+                        'contents' => 
+                        array (
+                          0 => 
+                          array (
+                            'type' => 'text',
+                            'text' => 'RpdBot',
+                            'size' => 'xs',
+                            'color' => '#aaaaaa',
+                            'flex' => 0,
+                          ),
+                          1 => 
+                          array (
+                            'type' => 'text',
+                            'text' => '#2018',
+                            'color' => '#aaaaaa',
+                            'size' => 'xs',
+                            'align' => 'end',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+            )
+        );
+    }
+}   
 if($message['type']=='text') {
     if ($command == '/instagram') { 
         
@@ -643,28 +618,29 @@ if($message['type']=='text') {
         $balas = array( 
             'replyToken' => $replyToken, 
             'messages' => array( 
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
+                array ( 
+                        'type' => 'template', 
+                          'altText' => 'Kamu Ahli apa?', 
+                          'template' =>  
+                          array ( 
+                            'type' => 'buttons', 
+                            'thumbnailImageUrl' => $result['a2'], 
+                            'imageAspectRatio' => 'rectangle', 
+                            'imageSize' => 'cover', 
+                            'imageBackgroundColor' => '#FFFFFF', 
+                            'title' => $reult['a3'], 
+                            'text' => $reult['a1'], 
+                            'actions' =>  
+                            array ( 
+                              0 =>  
+                              array ( 
+                                'type' => 'message', 
+                                'label' => 'Done', 
+                                'text' => 'Terimakasih RpdBot', 
+                              ), 
+                            ), 
+                          ), 
+                        ) 
             ) 
         ); 
     }
@@ -695,66 +671,10 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-        if ($command == '/lirik') {
-        $result2 = imgj($options);
-        $result = lirik($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
                 array(
-                  'type' => 'image',
-                  'originalContentUrl' => $result2,
-                  'previewImageUrl' => $result2
-                ),
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
+                    'type' => 'text',
+                    'text' => $result
+                )
             )
         );
     }
@@ -769,23 +689,23 @@ if($message['type']=='text') {
             'messages' => array( 
                 array ( 
                         'type' => 'template', 
-                          'altText' => '[INFORMASI]', 
+                          'altText' => 'About Creator RpdBot', 
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
-                            'thumbnailImageUrl' => 'https://image.ibb.co/c5K17q/33727728-1041049566051644-99906234999635968-n.jpg', 
+                            'thumbnailImageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg', 
                             'imageAspectRatio' => 'rectangle', 
                             'imageSize' => 'cover', 
                             'imageBackgroundColor' => '#FFFFFF', 
-                            'title' => 'Virtual System Bots', 
-                            'text' => 'Creator Bots', 
+                            'title' => 'Muhammad Raihan Permadi', 
+                            'text' => 'Creator RpdBot', 
                             'actions' =>  
                             array ( 
                               0 =>  
                               array ( 
                                 'type' => 'uri', 
                                 'label' => 'Contact', 
-                                'uri' => 'https://line.me/ti/p/~rafly_cf', 
+                                'uri' => 'https://line.me/ti/p/~rhnprmd', 
                               ), 
                             ), 
                           ), 
@@ -802,28 +722,10 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
+                array( 
+                    'type' => 'text',
+                    'text' => $result
+                )
             )
         );
     }
@@ -837,28 +739,10 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
             )
         );
     }
@@ -872,93 +756,9 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-        if ($command == '/wikipedia') {
-
-        $result = wiki($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => $result,
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-        if ($command == '/test1') {
-
-        $result = shalat($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-                  'type' => 'flex',
-                  'altText' => 'this is a flex message',
-                  'contents' => 
-                  array (
-                    'type' => 'bubble',
-                    'body' => 
-                    array (
-                      'type' => 'box',
-                      'layout' => 'vertical',
-                      'contents' => 
-                      array (
-                        0 => 
-                        array (
-                          'type' => 'text',
-                          'text' => $result,
-                          'wrap' => True,
-                        ),
-                      ),
-                    ),
-                  ),
+                array(
+                    'type' => 'text',
+                    'text' => $result
                 )
             )
         );
@@ -1000,7 +800,6 @@ if($message['type']=='text') {
         ); 
     }
 }
-#----------------------------------#
 if($message['type']=='text') {
         if ($command == '/arti-nama') {
         $result = arti($options);
@@ -1011,127 +810,6 @@ if($message['type']=='text') {
                     'type' => 'text',
                     'text' => $result
                 )
-            )
-        );
-    }
-}
-#----------------------------------#
-if($message['type']=='text') {
-        if ($command == 'Help' || $command == 'help') {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-                      'type' => 'template',
-                      'altText' => 'this is a image carousel template',
-                      'template' => 
-                      array (
-                        'type' => 'image_carousel',
-                        'columns' => 
-                        array (
-                          0 => 
-                          array (
-                            'imageUrl' => 'https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/64/c9/6f/64c96f0c-0202-09f6-78b5-1ef915086215/Prod-1x_U007emarketing-85-220-0-5.png/246x0w.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Instagram',
-                              'text' => 'Example: /instagram jokowi',
-                            ),
-                          ),
-                          1 => 
-                          array (
-                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=RpdBot&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Neon Teks',
-                              'text' => 'Example: /neon YOURTEXT',
-                            ),
-                          ),
-                          2 => 
-                          array (
-                            'imageUrl' => 'https://pbs.twimg.com/profile_images/907880885848088578/maJDkfTn_400x400.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'TTS',
-                              'text' => 'Example: /say Rafly Gans',
-                            ),
-                          ),
-                          3 => 
-                          array (
-                            'imageUrl' => 'https://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-5.gif',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Jam Indo',
-                              'text' => '/jam',
-                            ),
-                          ),
-                          4 => 
-                          array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Creator',
-                              'text' => '/creator',
-                            ),
-                          ),
-                          5 => 
-                          array (
-                            'imageUrl' => 'https://2.bp.blogspot.com/-rj1nxBPkzT0/UEJCW4qHsGI/AAAAAAAAAu0/6xKNlKRHi9U/s1600/perahi+kertas.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Lirik',
-                              'text' => 'Example: /lirik Havana',
-                            ),
-                          ),
-                          6 => 
-                          array (
-                            'imageUrl' => 'https://www.dailygizmo.tv/wp-content/uploads/2016/04/Joox-Logo-1440x937.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Music',
-                              'text' => 'Example: /song asal kau bahagia',
-                            ),
-                          ),
-                          7 => 
-                          array (
-                            'imageUrl' => 'https://www.kiblat.net/files/2018/02/shalat.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Shalat',
-                              'text' => 'Contoh: /shalat Bandung',
-                            ),
-                          ),
-                          8 => 
-                          array (
-                            'imageUrl' => 'https://us.123rf.com/450wm/nulinukas/nulinukas1202/nulinukas120200019/12251019-boy-watching-tv-cartoon.jpg?ver=6',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Jadwal Tv',
-                              'text' => 'Example: /jadwaltv rcti',
-                            ),
-                          ),
-                          9 => 
-                          array (
-                            'imageUrl' => 'https://pa1.narvii.com/6342/76ec050c2d184bbe728f7cedd48aadc29250b325_hq.gif',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'More Command',
-                              'text' => '/menu',
-                            ),
-                          ),
-                        ),
-                      ),
-                    )
             )
         );
     }
