@@ -837,12 +837,12 @@ if($message['type']=='text') {
                           ),
                           1 => 
                           array (
-                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=Virtual%20SYSTEM&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
+                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=RpdBot&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
                             'action' => 
                             array (
                               'type' => 'message',
                               'label' => 'Neon Teks',
-                              'text' => 'Contoh: /neon Rafly Gans',
+                              'text' => 'Contoh: /neon RpdBot Mantap',
                             ),
                           ),
                           2 => 
@@ -857,17 +857,17 @@ if($message['type']=='text') {
                           ),
                           3 => 
                           array (
-                            'imageUrl' => 'http://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-13.gif',
+                            'imageUrl' => 'https://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-5.gif',
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Jam Indonesia',
+                              'label' => 'Jam Indo',
                               'text' => '/jam',
                             ),
                           ),
                           4 => 
                           array (
-                            'imageUrl' => 'https://image.ibb.co/c5K17q/33727728-1041049566051644-99906234999635968-n.jpg',
+                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
