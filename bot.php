@@ -685,7 +685,7 @@ if($message['type']=='text') {
             'messages' => array( 
                 array ( 
                         'type' => 'template', 
-                          'altText' => 'INFORMASI CREATOR', 
+                          'altText' => '[INFO]', 
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
@@ -693,8 +693,8 @@ if($message['type']=='text') {
                             'imageAspectRatio' => 'rectangle', 
                             'imageSize' => 'cover', 
                             'imageBackgroundColor' => '#FFFFFF', 
-                            'title' => 'VirtualSystem TeamBots', 
-                            'text' => 'Creator Bots', 
+                            'title' => 'VirtualSystem TeamBots',
+                            'text' => 'Creator VSB', 
                             'actions' =>  
                             array ( 
                               0 =>  
@@ -703,7 +703,6 @@ if($message['type']=='text') {
                                 'label' => 'Contact', 
                                 'uri' => 'https://line.me/ti/p/~rafly_cf', 
                               ), 
-							  +
                             ), 
                           ), 
                         ) 
