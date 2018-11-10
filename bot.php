@@ -281,29 +281,25 @@ function qibla($keyword) {
 }
 //show menu, saat join dan command,menu
 if ($command == '/menu') {
-    $text .= "「Keyword RpdBot~」\n\n";
-    $text .= "- Help\n";
-    $text .= "- /jam \n";
-    $text .= "- /quotes \n";
-    $text .= "- /say [teks] \n";
-    $text .= "- /definition [teks] \n";
-    $text .= "- /cooltext [teks] \n";
-    $text .= "- /shalat [lokasi] \n";
-    $text .= "- /qiblat [lokasi] \n";
-    $text .= "- /film [teks] \n";
-    $text .= "- /qr [teks] \n";
-    $text .= "- /neon [teks] \n";
-    $text .= "- /ahli [nama] \n";
-    $text .= "- /arti-nama [nama] \n";
-    $text .= "- /light [teks] \n";
-    $text .= "- /film-syn [Judul] \n";
-    $text .= "- /lirik [Judul] \n";
-    $text .= "- /wikipedia [Judul] \n";
-    $text .= "- /zodiak [tanggal lahir] \n";
-        $text .= "- /instagram [unsername] \n";
-        $text .= "- /jadwaltv [stasiun] \n";
-    $text .= "- /creator \n";
-    $text .= "\n「Done~」";
+    $text .= "「MENU VirtualBots」\n\n";
+    $text .= "/jam \n";
+    $text .= "/quotes \n";
+    $text .= "/say [teks] \n";
+    $text .= "/definition [teks] \n";
+    $text .= "/cooltext [teks] \n";
+    $text .= "/shalat [lokasi] \n";
+    $text .= "/qiblat [lokasi] \n";
+    $text .= "/film [teks] \n";
+    $text .= "/qr [teks] \n";s] \n";
+    $text .= "/ahli [nama] \n";
+    $text .= "/arti-nama [nama] \n";
+    $text .= "/light [teks] \n";
+    $text .= "/film-syn [Judul] \n";
+    $text .= "/zodiak [tanggal lahir] \n";
+        $text .= "/instagram [unsername] \n";
+        $text .= "/jadwaltv [stasiun] \n";
+    $text .= "/creator \n";
+    $text .= "\n「C: RPD&VSB」";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -689,24 +685,25 @@ if($message['type']=='text') {
             'messages' => array( 
                 array ( 
                         'type' => 'template', 
-                          'altText' => 'About Creator RpdBot', 
+                          'altText' => 'INFORMASI CREATOR', 
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
-                            'thumbnailImageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg', 
+                            'thumbnailImageUrl' => 'https://image.ibb.co/c5K17q/33727728-1041049566051644-99906234999635968-n.jpg', 
                             'imageAspectRatio' => 'rectangle', 
                             'imageSize' => 'cover', 
                             'imageBackgroundColor' => '#FFFFFF', 
-                            'title' => 'Muhammad Raihan Permadi', 
-                            'text' => 'Creator RpdBot', 
+                            'title' => 'VirtualSystem TeamBots', 
+                            'text' => 'Creator Bots', 
                             'actions' =>  
                             array ( 
                               0 =>  
                               array ( 
                                 'type' => 'uri', 
                                 'label' => 'Contact', 
-                                'uri' => 'https://line.me/ti/p/~rhnprmd', 
+                                'uri' => 'https://line.me/ti/p/~rafly_cf', 
                               ), 
+							  +
                             ), 
                           ), 
                         ) 
