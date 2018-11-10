@@ -857,7 +857,7 @@ if($message['type']=='text') {
                           ),
                           3 => 
                           array (
-                            'imageUrl' => 'http://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-13.gif',
+                            'imageUrl' => 'https://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-5.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -902,7 +902,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Shalat',
-                              'text' => 'Ex: /shalat Bandung',
+                              'text' => 'Ex: /shalat Jakarta',
                             ),
                           ),
                           8 => 
