@@ -832,7 +832,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Instagram',
-                              'text' => 'Contoh: /instagram jokowi',
+                              'text' => 'Ex: /instagram jokowi',
                             ),
                           ),
                           1 => 
@@ -842,7 +842,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Neon Teks',
-                              'text' => 'Contoh: /neon RpdBot Mantap',
+                              'text' => 'Ex: /neon your-text',
                             ),
                           ),
                           2 => 
@@ -852,12 +852,12 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'TTS',
-                              'text' => 'Contoh: /say Mantap Jiwa',
+                              'text' => 'Ex: /say mision imposible',
                             ),
                           ),
                           3 => 
                           array (
-                            'imageUrl' => 'https://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-5.gif',
+                            'imageUrl' => 'http://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-13.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -867,7 +867,7 @@ if($message['type']=='text') {
                           ),
                           4 => 
                           array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'imageUrl' => 'https://image.ibb.co/c5K17q/33727728-1041049566051644-99906234999635968-n.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -882,7 +882,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Lirik',
-                              'text' => 'Contoh: /lirik asal kau bahagia',
+                              'text' => 'Ex: /lirik asal kau bahagia',
                             ),
                           ),
                           6 => 
@@ -892,7 +892,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Music',
-                              'text' => 'Contoh: /song asal kau bahagia',
+                              'text' => 'Ex: /song asal kau bahagia',
                             ),
                           ),
                           7 => 
@@ -902,7 +902,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Shalat',
-                              'text' => 'Contoh: /shalat Bandung',
+                              'text' => 'Ex: /shalat Jakarta',
                             ),
                           ),
                           8 => 
@@ -912,7 +912,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Jadwal Tv',
-                              'text' => 'Contoh: /jadwaltv rcti',
+                              'text' => 'Ex: /jadwaltv GlobalTV',
                             ),
                           ),
                           9 => 
