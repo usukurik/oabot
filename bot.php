@@ -832,7 +832,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Instagram',
-                              'text' => 'Example:\n/instagram jokowi',
+                              'text' => 'Contoh: /instagram jokowi',
                             ),
                           ),
                           1 => 
@@ -842,7 +842,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Neon Teks',
-                              'text' => 'Example:\n/neon Yout Text',
+                              'text' => 'Contoh: /neon RpdBot Mantap',
                             ),
                           ),
                           2 => 
@@ -852,7 +852,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'TTS',
-                              'text' => 'Example:\n/say Mantap Jiwa',
+                              'text' => 'Contoh: /say Mantap Jiwa',
                             ),
                           ),
                           3 => 
@@ -861,13 +861,13 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Jam Indo',
+                              'label' => 'Clocks',
                               'text' => '/jam',
                             ),
                           ),
                           4 => 
                           array (
-                            'imageUrl' => 'https://media.giphy.com/media/10zxDv7Hv5RF9C/giphy.gif',
+                            'imageUrl' => 'https://image.ibb.co/c5K17q/33727728-1041049566051644-99906234999635968-n.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -882,7 +882,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Lirik',
-                              'text' => 'Example:\n/lirik asal kau bahagia',
+                              'text' => 'Contoh: /lirik asal kau bahagia',
                             ),
                           ),
                           6 => 
@@ -892,7 +892,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Music',
-                              'text' => 'Example:\n/song asal kau bahagia',
+                              'text' => 'Contoh: /song asal kau bahagia',
                             ),
                           ),
                           7 => 
@@ -902,7 +902,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Shalat',
-                              'text' => 'Example:\n/shalat Bandung',
+                              'text' => 'Contoh: /shalat Jakarta',
                             ),
                           ),
                           8 => 
@@ -911,8 +911,8 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Jadwal Tv',
-                              'text' => 'Example:\n/jadwaltv trans7',
+                              'label' => 'Jadwal Televisi',
+                              'text' => 'Contoh: /jadwaltv rcti',
                             ),
                           ),
                           9 => 
@@ -921,7 +921,7 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'More Command',
+                              'label' => 'More Menu',
                               'text' => '/menu',
                             ),
                           ),
