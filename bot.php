@@ -827,37 +827,37 @@ if($message['type']=='text') {
                         array (
                           0 => 
                           array (
-                            'imageUrl' => 'https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/64/c9/6f/64c96f0c-0202-09f6-78b5-1ef915086215/Prod-1x_U007emarketing-85-220-0-5.png/246x0w.jpg',
+                            'imageUrl' => 'https://media.giphy.com/media/uo6rcjwHSAFsQ/giphy.gif',
                             'action' => 
                             array (
                               'type' => 'message',
                               'label' => 'Instagram',
-                              'text' => 'Contoh: /instagram jokowi',
+                              'text' => 'Example:\n/instagram jokowi',
                             ),
                           ),
                           1 => 
                           array (
-                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=RpdBot&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
+                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=Virtual%20SYSTEM&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
                             'action' => 
                             array (
                               'type' => 'message',
                               'label' => 'Neon Teks',
-                              'text' => 'Contoh: /neon RpdBot Mantap',
+                              'text' => 'Example:\n/neon Yout Text',
                             ),
                           ),
                           2 => 
                           array (
-                            'imageUrl' => 'https://pbs.twimg.com/profile_images/907880885848088578/maJDkfTn_400x400.jpg',
+                            'imageUrl' => 'https://media.giphy.com/media/3ohc10GA6j4XrLWzZK/giphy.gif',
                             'action' => 
                             array (
                               'type' => 'message',
                               'label' => 'TTS',
-                              'text' => 'Contoh: /say Mantap Jiwa',
+                              'text' => 'Example:\n/say Mantap Jiwa',
                             ),
                           ),
                           3 => 
                           array (
-                            'imageUrl' => 'https://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-5.gif',
+                            'imageUrl' => 'http://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-13.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -867,7 +867,7 @@ if($message['type']=='text') {
                           ),
                           4 => 
                           array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'imageUrl' => 'https://media.giphy.com/media/10zxDv7Hv5RF9C/giphy.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -882,42 +882,42 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Lirik',
-                              'text' => 'Contoh: /lirik asal kau bahagia',
+                              'text' => 'Example:\n/lirik asal kau bahagia',
                             ),
                           ),
                           6 => 
                           array (
-                            'imageUrl' => 'https://www.dailygizmo.tv/wp-content/uploads/2016/04/Joox-Logo-1440x937.jpg',
+                            'imageUrl' => 'https://media.giphy.com/media/l2JhGk8rR9WFLEDQY/giphy.gif',
                             'action' => 
                             array (
                               'type' => 'message',
                               'label' => 'Music',
-                              'text' => 'Contoh: /song asal kau bahagia',
+                              'text' => 'Example:\n/song asal kau bahagia',
                             ),
                           ),
                           7 => 
                           array (
-                            'imageUrl' => 'https://www.kiblat.net/files/2018/02/shalat.jpg',
+                            'imageUrl' => 'https://media.giphy.com/media/l0DAH3NEBeYW2JFkc/giphy.gif',
                             'action' => 
                             array (
                               'type' => 'message',
                               'label' => 'Shalat',
-                              'text' => 'Contoh: /shalat Bandung',
+                              'text' => 'Example:\n/shalat Bandung',
                             ),
                           ),
                           8 => 
                           array (
-                            'imageUrl' => 'https://us.123rf.com/450wm/nulinukas/nulinukas1202/nulinukas120200019/12251019-boy-watching-tv-cartoon.jpg?ver=6',
+                            'imageUrl' => 'https://media.giphy.com/media/l378gpi62P5nyfbSU/giphy.gif',
                             'action' => 
                             array (
                               'type' => 'message',
                               'label' => 'Jadwal Tv',
-                              'text' => 'Contoh: /jadwaltv rcti',
+                              'text' => 'Example:\n/jadwaltv trans7',
                             ),
                           ),
                           9 => 
                           array (
-                            'imageUrl' => 'https://pa1.narvii.com/6342/76ec050c2d184bbe728f7cedd48aadc29250b325_hq.gif',
+                            'imageUrl' => 'https://media.giphy.com/media/euQotCus27vQYR7wI3/giphy.gif',
                             'action' => 
                             array (
                               'type' => 'message',
