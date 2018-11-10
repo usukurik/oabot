@@ -837,7 +837,7 @@ if($message['type']=='text') {
                           ),
                           1 => 
                           array (
-                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=RpdBot&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
+                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=Virtual%20SYSTEM&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
                             'action' => 
                             array (
                               'type' => 'message',
