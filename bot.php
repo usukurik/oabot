@@ -827,7 +827,7 @@ if($message['type']=='text') {
                         array (
                           0 => 
                           array (
-                            'imageUrl' => 'https://media.giphy.com/media/uo6rcjwHSAFsQ/giphy.gif',
+                            'imageUrl' => 'https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/64/c9/6f/64c96f0c-0202-09f6-78b5-1ef915086215/Prod-1x_U007emarketing-85-220-0-5.png/246x0w.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -842,12 +842,12 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Neon Teks',
-                              'text' => 'Contoh: /neon RpdBot Mantap',
+                              'text' => 'Contoh: /neon Rafly Gans',
                             ),
                           ),
                           2 => 
                           array (
-                            'imageUrl' => 'https://media.giphy.com/media/3ohc10GA6j4XrLWzZK/giphy.gif',
+                            'imageUrl' => 'https://pbs.twimg.com/profile_images/907880885848088578/maJDkfTn_400x400.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -861,7 +861,7 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Clocks',
+                              'label' => 'Jam Indonesia',
                               'text' => '/jam',
                             ),
                           ),
@@ -887,7 +887,7 @@ if($message['type']=='text') {
                           ),
                           6 => 
                           array (
-                            'imageUrl' => 'https://media.giphy.com/media/l2JhGk8rR9WFLEDQY/giphy.gif',
+                            'imageUrl' => 'https://www.dailygizmo.tv/wp-content/uploads/2016/04/Joox-Logo-1440x937.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -897,31 +897,31 @@ if($message['type']=='text') {
                           ),
                           7 => 
                           array (
-                            'imageUrl' => 'https://media.giphy.com/media/l0DAH3NEBeYW2JFkc/giphy.gif',
+                            'imageUrl' => 'https://www.kiblat.net/files/2018/02/shalat.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
                               'label' => 'Shalat',
-                              'text' => 'Contoh: /shalat Jakarta',
+                              'text' => 'Contoh: /shalat Bandung',
                             ),
                           ),
                           8 => 
                           array (
-                            'imageUrl' => 'https://media.giphy.com/media/l378gpi62P5nyfbSU/giphy.gif',
+                            'imageUrl' => 'https://us.123rf.com/450wm/nulinukas/nulinukas1202/nulinukas120200019/12251019-boy-watching-tv-cartoon.jpg?ver=6',
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Jadwal Televisi',
+                              'label' => 'Jadwal Tv',
                               'text' => 'Contoh: /jadwaltv rcti',
                             ),
                           ),
                           9 => 
                           array (
-                            'imageUrl' => 'https://media.giphy.com/media/euQotCus27vQYR7wI3/giphy.gif',
+                            'imageUrl' => 'https://pa1.narvii.com/6342/76ec050c2d184bbe728f7cedd48aadc29250b325_hq.gif',
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'More Menu',
+                              'label' => 'More Command',
                               'text' => '/menu',
                             ),
                           ),
