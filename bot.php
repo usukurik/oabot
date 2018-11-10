@@ -902,7 +902,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Shalat',
-                              'text' => 'Ex: /shalat Jakarta',
+                              'text' => 'Ex: /shalat Bandung',
                             ),
                           ),
                           8 => 
